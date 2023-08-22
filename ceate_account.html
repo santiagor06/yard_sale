@@ -35,7 +35,7 @@
     }
     .title {
       font-size: var(--lg);
-      text-align: center;
+      align-self: flex-start;
     }
     .container-form {
       width: 300px;
@@ -72,52 +72,28 @@
 
       font-size: var(--md);
     }
-    .secondary-button {
-      background-color: var(--White);
-      border: solid var(--Hospital-green) 1px;
-      border-radius: 8px;
-      width: 316px;
-      margin-top: 20px;
-      color: var(--Hospital-green);
-      font-weight: bold;
-      height: 50px;
-      padding: 8px;
-      cursor: pointer;
-
-      font-size: var(--md);
+    .form-button {
+      margin-top: 30px;
     }
-    .login-button {
-      margin-top: 40px;
-    }
-
     .logo {
       width: 150px;
       height: 150px;
       align-self: center;
       display: none;
     }
-    .renter {
-      margin-top: 16px;
-    }
+
     .form {
       margin-bottom: 100px;
-    }
-    .form a {
-      text-decoration: none;
-      color: var(--Hospital-green);
-      display: grid;
-      margin-top: 24px;
-      place-items: center;
-      font-size: var(--sm);
-    }
-    #email {
-      margin-bottom: 16px;
+      width: 300px;
     }
     @media (max-width: 640px) {
-      .logo {
-        display: block;
+      .container-form {
+        height: 100%;
       }
-      .signup {
+      .form {
+        height: 100%;
+      }
+      .create-button {
         position: absolute;
         bottom: 0px;
         margin-bottom: 20px;
@@ -127,30 +103,30 @@
   <body>
     <div class="login">
       <div class="container-form">
-        <img src="./assets/logos/logo_yard_sale.svg" alt="logo" class="logo" />
+        <h2 class="title">My account</h2>
         <form action="" class="form">
-          <label class="label renter" for="email"> Email address</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="email@example.com"
-            class="input"
-          />
-          <label class="label" for="password">Password</label>
-          <input
-            type="password"
-            placeholder="********"
-            id="password"
-            class="password-type input"
-          />
+          <div>
+            <label class="label" for="name">Name</label>
+            <input type="name" placeholder="name" class="name-type input" />
+            <label class="label" for="email">Email address</label>
+            <input
+              type="email"
+              placeholder="email@example.com"
+              class="email-type input"
+            />
+            <label class="label renter" for="password">Password</label>
+            <input
+              type="password"
+              placeholder="********"
+              class="newPassword-type input"
+            />
+          </div>
           <input
             type="submit"
-            class="primary-button login-button"
-            value="Login"
+            class="primary-button create-button"
+            value="Create account"
           />
-          <a href="/">Forgot my password</a>
         </form>
-        <button class="secondary-button signup">Sign up</button>
       </div>
     </div>
   </body>
