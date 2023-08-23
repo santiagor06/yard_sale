@@ -27,10 +27,99 @@
       margin: 0;
       font-family: "Quicksand", sans-serif;
     }
+    .menu {
+      display: none;
+    }
+    .logo {
+      width: 100px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      border-bottom: solid var(--Very-ligth-pink) 1px;
+    }
+    .nav-left ul,
+    .nav-right ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-left ul {
+      margin-left: 32px;
+    }
+    .nav-left a {
+      text-decoration: none;
+      color: var(--Very-ligth-pink);
+      padding: 0 8px;
+      border: solid var(--White) 1px;
+      border-radius: 8px;
+    }
+    .nav-left a:hover {
+      border-color: var(--Hospital-green);
+      color: var(--Hospital-green);
+    }
+    .nav-left {
+      display: flex;
+
+      margin-left: 24px;
+    }
+    .nav-right {
+      margin-right: 24px;
+      display: flex;
+      align-items: center;
+    }
+    .shopping-car div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      background-color: var(--Hospital-green);
+      border-radius: 50%;
+      font-size: var(--sm);
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .shopping-car {
+      position: relative;
+    }
+    .email {
+      font-size: var(--sm);
+      color: var(--Very-ligth-pink);
+      margin-right: 24px;
+    }
+    .car {
+      position: relative;
+    }
+    @media (max-width: 640px) {
+      .menu {
+        display: block;
+      }
+      .nav-left ul {
+        display: none;
+      }
+      .email {
+        display: none;
+      }
+      .nav-right {
+        margin-right: 0;
+      }
+      .nav-left {
+        margin: 0;
+      }
+    }
   </style>
+
   <body>
     <nav>
-      <img src="./assets/icons/icon_menu.svg" alt="menu" />
+      <img class="menu" src="./assets/icons/icon_menu.svg" alt="menu" />
       <section class="nav-left">
         <img src="./assets/logos/logo_yard_sale.svg" class="logo" alt="logo" />
         <ul>
@@ -43,9 +132,17 @@
         </ul>
       </section>
       <section class="nav-right">
-        <li>example@email.com</li>
-        <li><img src="./assets/icons/bt_add_to_cart.svg" alt="car" /></li>
-        <p>2</p>
+        <ul>
+          <li class="email">example@email.com</li>
+          <li class="shopping-car">
+            <img
+              src="./assets/icons/icon_shopping_cart.svg"
+              alt="car"
+              class="car"
+            />
+            <div>2</div>
+          </li>
+        </ul>
       </section>
     </nav>
   </body>
