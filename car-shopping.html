@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --Very-ligth-pink: #c7c7c7;
+      --Hospital-green: #acd9b2;
+      --Text-input-field: #f7f7f7;
+      --White: #ffffff;
+      --Black: #000000;
+      --Dark: #232830;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .primary-button {
+      background-color: var(--Hospital-green);
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      color: var(--White);
+      font-weight: bold;
+      height: 50px;
+      padding: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: var(--md);
+    }
+    .detail-container {
+      width: 360px;
+      position: absolute;
+      right: 0;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .add-button {
+      margin-top: 24px;
+    }
+    .card-order figure img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .card-order figure {
+      padding: 0;
+      margin: 0;
+    }
+    .order {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .total {
+      background-color: var(--Text-input-field);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      padding: 16px;
+      border-radius: 8px;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+    .total p:nth-child(2) {
+      text-align: end;
+      color: var(--Dark);
+      font-weight: bold;
+      font-size: var(--md);
+    }
+    .total p span:nth-child(1) {
+      color: var(--Dark);
+      font-weight: bold;
+      font-size: var(--md);
+    }
+    .total p span:nth-child(2) {
+      color: var(--Very-ligth-pink);
+      font-weight: 300;
+      font-size: var(--md);
+    }
+    .container-order {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .total p {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .card-order p:nth-child(2) {
+      color: var(--Very-ligth-pink);
+      font-weight: 300;
+    }
+    .card-order p:nth-child(3) {
+      color: var(--Dark);
+      font-weight: bold;
+      font-size: var(--md);
+    }
+    .card-order {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: center;
+      padding-right: 16px;
+    }
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 24px;
+    }
+    @media (max-width: 640px) {
+    }
+  </style>
+  <body>
+    <aside class="detail-container">
+      <div class="container-order">
+        
+        <h1 class="title">Shopping cart</h1>
+        <div class="order-content">
+          <div class="card-order">
+            <figure>
+              <img
+                src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt=""
+              />
+            </figure>
+            <p>Bike</p>
+            <p>$ 120,00</p>
+          </div>
+          <div class="total">
+            <p>
+              <span>04.25.2021</span>
+              <span>6 articles</span>
+            </p>
+            <p>$ 560.00</p>
+          </div>
+          <button class="primary-button add-button">Checkout</button>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>
