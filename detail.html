@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --Very-ligth-pink: #c7c7c7;
+      --Hospital-green: #acd9b2;
+      --Text-input-field: #f7f7f7;
+      --White: #ffffff;
+      --Black: #000000;
+      --Dark: #232830;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: "Quicksand", sans-serif;
+    }
+    .main-photo {
+      width: 360px;
+      height: 340px;
+      border-radius: 0 0 20px 20px;
+      object-fit: cover;
+      position: relative;
+    }
+    .detail-content p:nth-child(1) {
+      color: var(--Black);
+      font-size: var(--lg);
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .detail-content p:nth-child(2),
+    .detail-content p:nth-child(3) {
+      color: var(--Very-ligth-pink);
+      font-size: var(--md);
+      font-weight: 300;
+    }
+    .detail-content p:nth-child(3) {
+      margin-top: 20px;
+    }
+    .detail-content p:nth-child(2) {
+      margin-top: 0px;
+    }
+    .detail-content {
+      padding: 0 16px 16px 16px;
+      margin-top: 32px;
+      height: 100%;
+    }
+    .primary-button {
+      background-color: var(--Hospital-green);
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      color: var(--White);
+      font-weight: bold;
+      height: 50px;
+      padding: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: var(--md);
+    }
+    .detail-container {
+      width: 360px;
+      position: absolute;
+      right: 0;
+    }
+    .product-close {
+      position: absolute;
+      margin-left: 8px;
+      margin-top: 8px;
+      border-radius: 50%;
+      background-color: var(--White);
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+    .add-button {
+      margin-top: 24px;
+    }
+    @media (max-width: 640px) {
+    }
+  </style>
+  <body>
+    <aside class="detail-container">
+      <div class="product-close">
+        <img src="./assets/icons/icon_close.png" alt="" />
+      </div>
+      <img
+        src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        alt=""
+        class="main-photo"
+      />
+      <div class="detail-content">
+        <p>$ 120,00</p>
+        <p>Bike</p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum est
+          ipsa recusandae dolorum atque, omnis voluptates tempore! Delectus
+          praesentium odit laborum expedita ratione quia illum laudantium fugit
+          asperiores, sint quas?
+        </p>
+        <button class="primary-button add-button">
+          <img src="./assets/icons/bt_add_to_cart.svg" alt="" />
+          Add to cart
+        </button>
+      </div>
+    </aside>
+  </body>
+</html>
