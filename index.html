@@ -42,7 +42,7 @@
         </ul>
       </section>
 
-      <div class="draw-menu">
+      <div class="draw-menu inactive">
         <ul>
           <li><a href="/">My orders</a></li>
           <li><a href="/">My account</a></li>
@@ -70,7 +70,7 @@
         </ul>
       </div>
     </nav>
-    <aside class="detail-container inactive">
+    <aside id="carShopping" class="inactive">
       <div class="container-order">
         <h1 class="title">Shopping cart</h1>
         <div class="order-content">
@@ -115,10 +115,34 @@
         </div>
       </div>
     </aside>
-    <section class="main-container">
-      <div class="cards-container">
 
+    <aside id="detailProduct" class="inactive">
+      <div class="product-close">
+        <img src="./assets/icons/icon_close.png" alt="" />
       </div>
+      <img
+        src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        alt=""
+        class="main-photo"
+      />
+      <div class="detail-content">
+        <p>$ 120,00</p>
+        <p>Bike</p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum est
+          ipsa recusandae dolorum atque, omnis voluptates tempore! Delectus
+          praesentium odit laborum expedita ratione quia illum laudantium fugit
+          asperiores, sint quas?
+        </p>
+        <button class="primary-button add-button">
+          <img src="./assets/icons/bt_add_to_cart.svg" alt="" />
+          Add to cart
+        </button>
+      </div>
+    </aside>
+
+    <section class="main-container">
+      <div class="cards-container"></div>
     </section>
     <script src="./assets/js/main.js"></script>
   </body>

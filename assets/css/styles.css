@@ -148,6 +148,7 @@
   left: -20px;
   top:50px ;
   height: 100%;
+  width: 100%;
   background-color: var(--White);
 }
 .menu-mobile a {
@@ -179,7 +180,9 @@
   font-weight: bold;
 }
 
-/* aside detail */
+/* aside  */
+
+/*car shopping*/
 
 .primary-button {
   background-color: var(--Hospital-green);
@@ -197,9 +200,8 @@
 
   font-size: var(--md);
 }
-.detail-container {
+aside {
   width: 360px;
-  height: 100%;
  background-color: var(--White);
   position: absolute;
   right: 0;
@@ -286,6 +288,75 @@
   font-size: var(--lg);
   margin-bottom: 24px;
 }
+/*detail product*/
+#detailProduct{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.main-photo {
+  width: 360px;
+  height: 340px;
+  border-radius: 0 0 20px 20px;
+  object-fit: cover;
+  position: relative;
+}
+.detail-content p:nth-child(1) {
+  color: var(--Black);
+  font-size: var(--lg);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.detail-content p:nth-child(2),
+.detail-content p:nth-child(3) {
+  color: var(--Very-ligth-pink);
+  font-size: var(--md);
+  font-weight: 300;
+}
+.detail-content p:nth-child(3) {
+  margin-top: 20px;
+}
+.detail-content p:nth-child(2) {
+  margin-top: 0px;
+}
+.detail-content {
+  padding: 0 16px 0 16px;
+  margin-top: 32px;
+  
+}
+.primary-button {
+  background-color: var(--Hospital-green);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  color: var(--White);
+  font-weight: bold;
+  height: 50px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--md);
+}
+.product-close {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background-color: var(--White);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.add-button {
+  margin-top: 24px;
+}
+
+
   /*products home*/
 
   .cards-container {
