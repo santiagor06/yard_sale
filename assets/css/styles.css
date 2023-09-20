@@ -77,6 +77,7 @@
   }
   .shopping-car {
     position: relative;
+    cursor: pointer;
   }
   .email {
     font-size: var(--sm);
@@ -94,8 +95,8 @@
   .draw-menu {
     position: absolute;
     right: 81px;
-    top: 50px;
-    z-index: -1;
+    top: 53px;
+    
     width: 100px;
     height: auto;
     border: solid var(--Very-ligth-pink) 1px;
@@ -146,6 +147,8 @@
   position: absolute;
   left: -20px;
   top:50px ;
+  height: 100%;
+  background-color: var(--White);
 }
 .menu-mobile a {
   text-decoration: none;
@@ -196,7 +199,8 @@
 }
 .detail-container {
   width: 360px;
- 
+  height: 100%;
+ background-color: var(--White);
   position: absolute;
   right: 0;
   padding: 16px;
@@ -282,6 +286,53 @@
   font-size: var(--lg);
   margin-bottom: 24px;
 }
+  /*products home*/
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 24px;
+    place-content: center;
+    margin-top: 20px;
+  }
+  .card-product {
+    width: 240px;
+  }
+  .card-product > img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  .card-product figure img {
+    width: 40px;
+    height: 40px;
+  }
+  .card-product figure {
+    margin-right: 8px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .footer-contain {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  .footer-contain p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .price-container p:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .price-container p:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--Very-ligth-pink);
+  }
+  
 
   @media (max-width: 640px) {
     .draw-menu{
@@ -305,6 +356,20 @@
     .detail-container{
       position: static;
       margin-left: 7px;
+    }
+    .cards-container {
+      grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .card-product {
+      width: 140px;
+    }
+    .card-product > img {
+      width: 140px;
+      height: 140px;
+    }
+    .card-product figure img {
+      width: 30px;
+      height: 30px;
     }
   }
   @media (min-width: 641px){
