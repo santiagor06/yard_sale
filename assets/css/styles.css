@@ -1,0 +1,154 @@
+:root {
+    --Very-ligth-pink: #c7c7c7;
+    --Hospital-green: #acd9b2;
+    --Text-input-field: #f7f7f7;
+    --White: #ffffff;
+    --Black: #000000;
+    --Dark: #232830;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+  }
+  body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+  }
+  .menu {
+    display: none;
+  }
+  .logo {
+    width: 100px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: solid var(--Very-ligth-pink) 1px;
+    background-color: var(--White);
+  }
+  .nav-left ul,
+  .nav-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-left ul {
+    margin-left: 32px;
+  }
+  .nav-left a {
+    text-decoration: none;
+    color: var(--Very-ligth-pink);
+    padding: 0 8px;
+    border: solid var(--White) 1px;
+    border-radius: 8px;
+  }
+  .nav-left a:hover {
+    border-color: var(--Hospital-green);
+    color: var(--Hospital-green);
+  }
+  .nav-left {
+    display: flex;
+
+    margin-left: 24px;
+  }
+  .nav-right {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .shopping-car div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--Hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shopping-car {
+    position: relative;
+  }
+  .email {
+    font-size: var(--sm);
+    color: var(--Very-ligth-pink);
+    margin-right: 24px;
+    cursor: pointer;
+  }
+  .email:hover{
+    color: var(--Hospital-green);
+  }
+  .car {
+    position: relative;
+  }
+
+  .draw-menu {
+    position: absolute;
+    right: 81px;
+    top: 50px;
+    z-index: -1;
+    width: 100px;
+    height: auto;
+    border: solid var(--Very-ligth-pink) 1px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: var(--White);
+  }
+  .draw-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .draw-menu ul li {
+    text-align: end;
+  }
+  .draw-menu a {
+    text-decoration: none;
+  }
+  .draw-menu ul li:nth-child(1) a,
+  .draw-menu ul li:nth-child(2) a {
+    font-size: var(--md);
+    font-weight: bold;
+    color: var(--Black);
+  }
+  .draw-menu ul li:nth-child(1),
+  .draw-menu ul li:nth-child(2) {
+    margin-bottom: 24px;
+  }
+  .draw-menu ul li:last-child {
+    padding-top: 16px;
+    border-top: solid var(--Text-input-field) 1px;
+  }
+  .draw-menu ul li:last-child a {
+    color: var(--Hospital-green);
+    font-size: var(--sm);
+    font-weight: bold;
+  }
+.inactive{
+    display: none;
+}
+  @media (max-width: 640px) {
+    .menu {
+      display: block;
+    }
+    .nav-left ul {
+      display: none;
+    }
+    .email {
+      display: none;
+    }
+    .nav-right {
+      margin-right: 0;
+    }
+    .nav-left {
+      margin: 0;
+    }
+  }
