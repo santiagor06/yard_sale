@@ -4,17 +4,22 @@ const iconHamburguer = document.querySelector(".menu");
 const menuMobile = document.querySelector(".menu-mobile");
 const iconShoppingCar = document.querySelector(".shopping-car");
 const carShopping = document.querySelector("#carShopping");
+const detailProduct = document.querySelector("#detailProduct");
+const productClose = document.querySelector(".product-close");
 email.addEventListener("click", toggleMenu);
 iconHamburguer.addEventListener("click", toggleMenuMobile);
 iconShoppingCar.addEventListener("click", toggleAsideShoppingCar);
+productClose.addEventListener("click", closeProductDetail);
 
 function toggleMenu() {
   const isAsideClosed = carShopping.classList.contains("inactive");
+  detailProduct.classList.add("inactive");
   if (!isAsideClosed) carShopping.classList.add("inactive");
   menu.classList.toggle("inactive");
 }
 function toggleMenuMobile() {
   const isAsideClosed = carShopping.classList.contains("inactive");
+  detailProduct.classList.add("inactive");
 
   if (!isAsideClosed) carShopping.classList.add("inactive");
   menuMobile.classList.toggle("inactive");
@@ -22,11 +27,20 @@ function toggleMenuMobile() {
 function toggleAsideShoppingCar() {
   const isMenuMobileClosed = menuMobile.classList.contains("inactive");
   const isMenuClosed = menu.classList.contains("inactive");
+  detailProduct.classList.add("inactive");
   if (!isMenuMobileClosed) menuMobile.classList.add("inactive");
   if (!isMenuClosed) menu.classList.add("inactive");
   carShopping.classList.toggle("inactive");
 }
-
+function openProductDetail() {
+  carShopping.classList.add("inactive");
+  menu.classList.add("inactive");
+  menuMobile.classList.add("inactive");
+  detailProduct.classList.remove("inactive");
+}
+function closeProductDetail() {
+  detailProduct.classList.add("inactive");
+}
 const productList = [];
 productList.push({
   name: "Bike",
@@ -89,6 +103,7 @@ function renderProducts(arr) {
     const imageProduct = document.createElement("img");
     imageProduct.src = product.image;
     imageProduct.alt = "Product image";
+    imageProduct.addEventListener("click", openProductDetail);
 
     const priceContainer = document.createElement("div");
     priceContainer.classList.add("price-container");

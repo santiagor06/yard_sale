@@ -351,6 +351,7 @@ aside {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  cursor: pointer;
 }
 .add-button {
   margin-top: 24px;
@@ -374,6 +375,7 @@ aside {
     height: 240px;
     border-radius: 20px;
     object-fit: cover;
+    cursor: pointer;
   }
   .card-product figure img {
     width: 40px;
